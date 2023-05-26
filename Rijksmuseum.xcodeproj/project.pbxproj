@@ -9,13 +9,17 @@
 /* Begin PBXBuildFile section */
 		008BBDAE2A20D7990046DE7A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008BBDAD2A20D7990046DE7A /* AppDelegate.swift */; };
 		008BBDB02A20D7990046DE7A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008BBDAF2A20D7990046DE7A /* SceneDelegate.swift */; };
-		008BBDB22A20D7990046DE7A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008BBDB12A20D7990046DE7A /* ViewController.swift */; };
-		008BBDB52A20D7990046DE7A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 008BBDB32A20D7990046DE7A /* Main.storyboard */; };
 		008BBDB72A20D79A0046DE7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 008BBDB62A20D79A0046DE7A /* Assets.xcassets */; };
 		008BBDBA2A20D79A0046DE7A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 008BBDB82A20D79A0046DE7A /* LaunchScreen.storyboard */; };
 		008BBDC52A20D79A0046DE7A /* RijksmuseumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008BBDC42A20D79A0046DE7A /* RijksmuseumTests.swift */; };
 		008BBDCF2A20D79A0046DE7A /* RijksmuseumUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008BBDCE2A20D79A0046DE7A /* RijksmuseumUITests.swift */; };
 		008BBDD12A20D79A0046DE7A /* RijksmuseumUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008BBDD02A20D79A0046DE7A /* RijksmuseumUITestsLaunchTests.swift */; };
+		008BBDE32A20D85C0046DE7A /* ActionListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008BBDDE2A20D85C0046DE7A /* ActionListener.swift */; };
+		008BBDE42A20D85C0046DE7A /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008BBDDF2A20D85C0046DE7A /* Presenter.swift */; };
+		008BBDE52A20D85C0046DE7A /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008BBDE02A20D85C0046DE7A /* Router.swift */; };
+		008BBDE62A20D85C0046DE7A /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008BBDE12A20D85C0046DE7A /* Interactor.swift */; };
+		008BBDE72A20D85C0046DE7A /* ViewUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008BBDE22A20D85C0046DE7A /* ViewUpdater.swift */; };
+		008BBDEA2A20D8710046DE7A /* ViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008BBDE92A20D8710046DE7A /* ViewState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +43,6 @@
 		008BBDAA2A20D7990046DE7A /* Rijksmuseum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rijksmuseum.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		008BBDAD2A20D7990046DE7A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		008BBDAF2A20D7990046DE7A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		008BBDB12A20D7990046DE7A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		008BBDB42A20D7990046DE7A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		008BBDB62A20D79A0046DE7A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		008BBDB92A20D79A0046DE7A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		008BBDBB2A20D79A0046DE7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +51,12 @@
 		008BBDCA2A20D79A0046DE7A /* RijksmuseumUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RijksmuseumUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		008BBDCE2A20D79A0046DE7A /* RijksmuseumUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RijksmuseumUITests.swift; sourceTree = "<group>"; };
 		008BBDD02A20D79A0046DE7A /* RijksmuseumUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RijksmuseumUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		008BBDDE2A20D85C0046DE7A /* ActionListener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionListener.swift; sourceTree = "<group>"; };
+		008BBDDF2A20D85C0046DE7A /* Presenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
+		008BBDE02A20D85C0046DE7A /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		008BBDE12A20D85C0046DE7A /* Interactor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Interactor.swift; sourceTree = "<group>"; };
+		008BBDE22A20D85C0046DE7A /* ViewUpdater.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewUpdater.swift; sourceTree = "<group>"; };
+		008BBDE92A20D8710046DE7A /* ViewState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,10 +107,11 @@
 		008BBDAC2A20D7990046DE7A /* Rijksmuseum */ = {
 			isa = PBXGroup;
 			children = (
+				008BBDEB2A20D8B90046DE7A /* Screens */,
+				008BBDE82A20D8680046DE7A /* Enums */,
+				008BBDDD2A20D8400046DE7A /* Architecture Protocols */,
 				008BBDAD2A20D7990046DE7A /* AppDelegate.swift */,
 				008BBDAF2A20D7990046DE7A /* SceneDelegate.swift */,
-				008BBDB12A20D7990046DE7A /* ViewController.swift */,
-				008BBDB32A20D7990046DE7A /* Main.storyboard */,
 				008BBDB62A20D79A0046DE7A /* Assets.xcassets */,
 				008BBDB82A20D79A0046DE7A /* LaunchScreen.storyboard */,
 				008BBDBB2A20D79A0046DE7A /* Info.plist */,
@@ -125,6 +134,49 @@
 				008BBDD02A20D79A0046DE7A /* RijksmuseumUITestsLaunchTests.swift */,
 			);
 			path = RijksmuseumUITests;
+			sourceTree = "<group>";
+		};
+		008BBDDD2A20D8400046DE7A /* Architecture Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				008BBDDE2A20D85C0046DE7A /* ActionListener.swift */,
+				008BBDE12A20D85C0046DE7A /* Interactor.swift */,
+				008BBDDF2A20D85C0046DE7A /* Presenter.swift */,
+				008BBDE02A20D85C0046DE7A /* Router.swift */,
+				008BBDE22A20D85C0046DE7A /* ViewUpdater.swift */,
+			);
+			path = "Architecture Protocols";
+			sourceTree = "<group>";
+		};
+		008BBDE82A20D8680046DE7A /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				008BBDE92A20D8710046DE7A /* ViewState.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		008BBDEB2A20D8B90046DE7A /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				008BBDEC2A20D8BE0046DE7A /* Object List */,
+				008BBDED2A20D8C40046DE7A /* Object Details */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		008BBDEC2A20D8BE0046DE7A /* Object List */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Object List";
+			sourceTree = "<group>";
+		};
+		008BBDED2A20D8C40046DE7A /* Object Details */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Object Details";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,7 +285,6 @@
 			files = (
 				008BBDBA2A20D79A0046DE7A /* LaunchScreen.storyboard in Resources */,
 				008BBDB72A20D79A0046DE7A /* Assets.xcassets in Resources */,
-				008BBDB52A20D7990046DE7A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,9 +309,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				008BBDB22A20D7990046DE7A /* ViewController.swift in Sources */,
 				008BBDAE2A20D7990046DE7A /* AppDelegate.swift in Sources */,
 				008BBDB02A20D7990046DE7A /* SceneDelegate.swift in Sources */,
+				008BBDE32A20D85C0046DE7A /* ActionListener.swift in Sources */,
+				008BBDE72A20D85C0046DE7A /* ViewUpdater.swift in Sources */,
+				008BBDEA2A20D8710046DE7A /* ViewState.swift in Sources */,
+				008BBDE52A20D85C0046DE7A /* Router.swift in Sources */,
+				008BBDE62A20D85C0046DE7A /* Interactor.swift in Sources */,
+				008BBDE42A20D85C0046DE7A /* Presenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,14 +353,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		008BBDB32A20D7990046DE7A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				008BBDB42A20D7990046DE7A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		008BBDB82A20D79A0046DE7A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -442,7 +490,6 @@
 				INFOPLIST_FILE = Rijksmuseum/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -470,7 +517,6 @@
 				INFOPLIST_FILE = Rijksmuseum/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
