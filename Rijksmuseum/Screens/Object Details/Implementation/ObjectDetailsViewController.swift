@@ -23,6 +23,7 @@ final class ObjectDetailsViewController: UIViewController, ObjectDetailsViewActi
     
     private let textView: UITextView = {
         let textView = UITextView()
+        textView.font = .systemFont(ofSize: 14)
         textView.translatesAutoresizingMaskIntoConstraints = false
         return textView
     }()
@@ -36,12 +37,12 @@ final class ObjectDetailsViewController: UIViewController, ObjectDetailsViewActi
         
         NSLayoutConstraint.activate([
             label.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            label.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
-            label.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
+            label.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 10),
+            label.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -10),
             
-            textView.topAnchor.constraint(equalTo: label.bottomAnchor, constant: 20),
-            textView.leadingAnchor.constraint(equalTo: label.leadingAnchor),
-            textView.trailingAnchor.constraint(equalTo: label.trailingAnchor),
+            textView.topAnchor.constraint(equalTo: label.bottomAnchor, constant: 15),
+            textView.leadingAnchor.constraint(equalTo: label.leadingAnchor, constant: -5),
+            textView.trailingAnchor.constraint(equalTo: label.trailingAnchor, constant: 5),
             textView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
         ])
     }
@@ -68,7 +69,6 @@ extension ObjectDetailsViewController: ObjectDetailsViewUpdater {
             textView.text = viewModel.description
         case .error(let errorMessage):
             label.text = errorMessage
-            // TODO: retry button
         }
     }
 }

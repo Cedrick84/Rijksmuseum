@@ -17,6 +17,6 @@ extension ObjectDetailViewModel {
     
     init(_ summary: ArtObject) {
         title = summary.title
-        description = summary.description
+        description = summary.description ?? "No description available."
     }
 }
