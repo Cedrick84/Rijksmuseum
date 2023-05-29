@@ -28,6 +28,11 @@
 		002B0B562A24C1C900C38CCB /* APIClientImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002B0B552A24C1C900C38CCB /* APIClientImp.swift */; };
 		0049042D2A20F4A900D1085B /* ObjectListViewPresenterImpTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008BBE252A20E2720046DE7A /* ObjectListViewPresenterImpTests.swift */; };
 		0049042F2A20F54F00D1085B /* ObjectListViewRouterImpTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008BBE232A20E2250046DE7A /* ObjectListViewRouterImpTests.swift */; };
+		007514A02A25055C00706950 /* MockURLContentRetriever.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0075149F2A25055C00706950 /* MockURLContentRetriever.swift */; };
+		007514A22A25061F00706950 /* MockJSONDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007514A12A25061F00706950 /* MockJSONDecoder.swift */; };
+		007514A52A2506BD00706950 /* APIClientImpTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007514A42A2506BD00706950 /* APIClientImpTests.swift */; };
+		007514A92A250A2E00706950 /* list-response.json in Resources */ = {isa = PBXBuildFile; fileRef = 007514A72A250A2E00706950 /* list-response.json */; };
+		007514AD2A250FE300706950 /* Data+JSONFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007514AC2A250FE300706950 /* Data+JSONFile.swift */; };
 		008BBDAE2A20D7990046DE7A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008BBDAD2A20D7990046DE7A /* AppDelegate.swift */; };
 		008BBDB02A20D7990046DE7A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008BBDAF2A20D7990046DE7A /* SceneDelegate.swift */; };
 		008BBDB72A20D79A0046DE7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 008BBDB62A20D79A0046DE7A /* Assets.xcassets */; };
@@ -101,6 +106,11 @@
 		002B0B4E2A24BF3100C38CCB /* PaginatedViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginatedViewState.swift; sourceTree = "<group>"; };
 		002B0B512A24C0C900C38CCB /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		002B0B552A24C1C900C38CCB /* APIClientImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientImp.swift; sourceTree = "<group>"; };
+		0075149F2A25055C00706950 /* MockURLContentRetriever.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLContentRetriever.swift; sourceTree = "<group>"; };
+		007514A12A25061F00706950 /* MockJSONDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockJSONDecoder.swift; sourceTree = "<group>"; };
+		007514A42A2506BD00706950 /* APIClientImpTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientImpTests.swift; sourceTree = "<group>"; };
+		007514A72A250A2E00706950 /* list-response.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "list-response.json"; sourceTree = "<group>"; };
+		007514AC2A250FE300706950 /* Data+JSONFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+JSONFile.swift"; sourceTree = "<group>"; };
 		008BBDAA2A20D7990046DE7A /* Rijksmuseum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rijksmuseum.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		008BBDAD2A20D7990046DE7A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		008BBDAF2A20D7990046DE7A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -284,6 +294,31 @@
 			path = Implementation;
 			sourceTree = "<group>";
 		};
+		007514A32A2506A900706950 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				007514A62A250A2400706950 /* Responses */,
+				007514A42A2506BD00706950 /* APIClientImpTests.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		007514A62A250A2400706950 /* Responses */ = {
+			isa = PBXGroup;
+			children = (
+				007514A72A250A2E00706950 /* list-response.json */,
+			);
+			path = Responses;
+			sourceTree = "<group>";
+		};
+		007514AB2A250FD400706950 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				007514AC2A250FE300706950 /* Data+JSONFile.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		008BBDA12A20D7990046DE7A = {
 			isa = PBXGroup;
 			children = (
@@ -327,9 +362,11 @@
 		008BBDC32A20D79A0046DE7A /* RijksmuseumTests */ = {
 			isa = PBXGroup;
 			children = (
+				007514AB2A250FD400706950 /* Extensions */,
 				008BBE142A20E1090046DE7A /* Mock Architecture */,
 				008BBE1B2A20E13F0046DE7A /* Mocks */,
 				008BBE1E2A20E19C0046DE7A /* Enums */,
+				007514A32A2506A900706950 /* API */,
 				008BBE212A20E1F40046DE7A /* Screens */,
 			);
 			path = RijksmuseumTests;
@@ -483,6 +520,8 @@
 			isa = PBXGroup;
 			children = (
 				008BBE1C2A20E1540046DE7A /* MockViewControllerPresenter.swift */,
+				0075149F2A25055C00706950 /* MockURLContentRetriever.swift */,
+				007514A12A25061F00706950 /* MockJSONDecoder.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -636,6 +675,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				007514A92A250A2E00706950 /* list-response.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -706,10 +746,14 @@
 				008BBE182A20E1090046DE7A /* MockViewPresenter.swift in Sources */,
 				008BBE192A20E1090046DE7A /* MockViewUpdater.swift in Sources */,
 				008BBE282A20E2EE0046DE7A /* MockProtocols.swift in Sources */,
+				007514A02A25055C00706950 /* MockURLContentRetriever.swift in Sources */,
 				008BBE2D2A20E3D80046DE7A /* MockObjectListViewWorker.swift in Sources */,
+				007514A52A2506BD00706950 /* APIClientImpTests.swift in Sources */,
 				0049042D2A20F4A900D1085B /* ObjectListViewPresenterImpTests.swift in Sources */,
+				007514AD2A250FE300706950 /* Data+JSONFile.swift in Sources */,
 				0049042F2A20F54F00D1085B /* ObjectListViewRouterImpTests.swift in Sources */,
 				008BBE1D2A20E1540046DE7A /* MockViewControllerPresenter.swift in Sources */,
+				007514A22A25061F00706950 /* MockJSONDecoder.swift in Sources */,
 				008BBE202A20E19C0046DE7A /* EventProcessor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

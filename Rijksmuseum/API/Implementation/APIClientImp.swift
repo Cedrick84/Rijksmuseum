@@ -13,9 +13,31 @@ enum APIError: Error {
     case unknown
 }
 
+protocol URLContentRetriever {
+    func data(from url: URL) async throws -> (Data, URLResponse)
+}
+
+extension URLSession: URLContentRetriever {}
+
+protocol JSONDecoderProtocol {
+    func decode<T>(_ type: T.Type, from data: Data, keyPath: String, keyPathSeparator separator: String) throws -> T where T: Decodable
+    func decode<T>(_ type: T.Type, from data: Data) throws -> T where T: Decodable
+}
+
+extension JSONDecoder: JSONDecoderProtocol {}
+
 struct APIClientImp: APIClient {
     
-    private enum Endpoint {
+    private let urlContentRetriever: URLContentRetriever
+    private let jsonDecoder: JSONDecoderProtocol
+    
+    init(urlContentRetriever: URLContentRetriever = URLSession.shared,
+         jsonDecoder: JSONDecoderProtocol = JSONDecoder()) {
+        self.urlContentRetriever = urlContentRetriever
+        self.jsonDecoder = jsonDecoder
+    }
+    
+    enum Endpoint {
         case list(page: Int, size: Int)
         case details(id: String)
         
@@ -53,11 +75,11 @@ struct APIClientImp: APIClient {
     }
     
     private func map<T: Decodable>(object: T.Type, from url: URL, at keyPath: String) async throws -> T {
-        guard let (data, _) = try? await URLSession.shared.data(from: url) else {
+        guard let (data, _) = try? await urlContentRetriever.data(from: url) else {
             throw APIError.network
         }
         
-        guard let result = try? JSONDecoder().decode(T.self, from: data, keyPath: keyPath) else {
+        guard let result = try? jsonDecoder.decode(T.self, from: data, keyPath: keyPath, keyPathSeparator: ".") else {
             throw APIError.decoding
         }
         
