@@ -1,0 +1,38 @@
+{
+  "configurations" : [
+    {
+      "id" : "7C688602-D2DC-4BA7-B6D2-5BA430A70477",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:Rijksmuseum.xcodeproj",
+      "identifier" : "008BBDA92A20D7990046DE7A",
+      "name" : "Rijksmuseum"
+    }
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:Rijksmuseum.xcodeproj",
+        "identifier" : "008BBDBF2A20D79A0046DE7A",
+        "name" : "RijksmuseumTests"
+      }
+    },
+    {
+      "enabled" : false,
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:Rijksmuseum.xcodeproj",
+        "identifier" : "008BBDC92A20D79A0046DE7A",
+        "name" : "RijksmuseumUITests"
+      }
+    }
+  ],
+  "version" : 1
+}

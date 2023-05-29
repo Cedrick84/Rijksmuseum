@@ -10,5 +10,6 @@ import Foundation
 protocol ViewUpdater<State>: AnyObject {
     associatedtype State
     
+    @MainActor
     func update(state: State)
 }

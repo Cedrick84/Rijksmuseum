@@ -10,5 +10,6 @@ import Foundation
 protocol Router<Action> {
     associatedtype Action
     
+    @MainActor
     func handle(action: Action)
 }

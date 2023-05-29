@@ -9,6 +9,7 @@ import Foundation
 
 protocol ActionListener<Action> {
     associatedtype Action
-    
+
+    @MainActor
     func handle(action: Action)
 }

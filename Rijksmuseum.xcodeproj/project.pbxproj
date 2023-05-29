@@ -7,11 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0049042D2A20F4A900D1085B /* ObjectListViewPresenterImpTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008BBE252A20E2720046DE7A /* ObjectListViewPresenterImpTests.swift */; };
+		0049042F2A20F54F00D1085B /* ObjectListViewRouterImpTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008BBE232A20E2250046DE7A /* ObjectListViewRouterImpTests.swift */; };
 		008BBDAE2A20D7990046DE7A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008BBDAD2A20D7990046DE7A /* AppDelegate.swift */; };
 		008BBDB02A20D7990046DE7A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008BBDAF2A20D7990046DE7A /* SceneDelegate.swift */; };
 		008BBDB72A20D79A0046DE7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 008BBDB62A20D79A0046DE7A /* Assets.xcassets */; };
 		008BBDBA2A20D79A0046DE7A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 008BBDB82A20D79A0046DE7A /* LaunchScreen.storyboard */; };
-		008BBDC52A20D79A0046DE7A /* RijksmuseumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008BBDC42A20D79A0046DE7A /* RijksmuseumTests.swift */; };
 		008BBDCF2A20D79A0046DE7A /* RijksmuseumUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008BBDCE2A20D79A0046DE7A /* RijksmuseumUITests.swift */; };
 		008BBDD12A20D79A0046DE7A /* RijksmuseumUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008BBDD02A20D79A0046DE7A /* RijksmuseumUITestsLaunchTests.swift */; };
 		008BBDE32A20D85C0046DE7A /* ActionListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008BBDDE2A20D85C0046DE7A /* ActionListener.swift */; };
@@ -20,6 +21,28 @@
 		008BBDE62A20D85C0046DE7A /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008BBDE12A20D85C0046DE7A /* Interactor.swift */; };
 		008BBDE72A20D85C0046DE7A /* ViewUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008BBDE22A20D85C0046DE7A /* ViewUpdater.swift */; };
 		008BBDEA2A20D8710046DE7A /* ViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008BBDE92A20D8710046DE7A /* ViewState.swift */; };
+		008BBDF02A20D9D00046DE7A /* ArtObjectSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008BBDEF2A20D9D00046DE7A /* ArtObjectSummary.swift */; };
+		008BBDF22A20D9F30046DE7A /* ArtObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008BBDF12A20D9F30046DE7A /* ArtObject.swift */; };
+		008BBDF52A20DA4B0046DE7A /* ObjectListViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008BBDF42A20DA4B0046DE7A /* ObjectListViewRouter.swift */; };
+		008BBDF72A20DA750046DE7A /* ObjectListViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008BBDF62A20DA750046DE7A /* ObjectListViewPresenter.swift */; };
+		008BBDF92A20DAC10046DE7A /* ObjectListViewInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008BBDF82A20DAC10046DE7A /* ObjectListViewInteractor.swift */; };
+		008BBDFB2A20DAEF0046DE7A /* ObjectListViewProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008BBDFA2A20DAEF0046DE7A /* ObjectListViewProtocols.swift */; };
+		008BBDFE2A20DB8F0046DE7A /* ObjectSummaryCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008BBDFD2A20DB8F0046DE7A /* ObjectSummaryCellViewModel.swift */; };
+		008BBE012A20DBFF0046DE7A /* ObjectListViewRouterImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008BBE002A20DBFF0046DE7A /* ObjectListViewRouterImp.swift */; };
+		008BBE042A20DC510046DE7A /* ViewControllerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008BBE032A20DC510046DE7A /* ViewControllerPresenter.swift */; };
+		008BBE062A20DC9D0046DE7A /* ObjectListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008BBE052A20DC9D0046DE7A /* ObjectListViewController.swift */; };
+		008BBE082A20DD1E0046DE7A /* ObjectListViewPresenterImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008BBE072A20DD1E0046DE7A /* ObjectListViewPresenterImp.swift */; };
+		008BBE0A2A20DD440046DE7A /* ObjectListViewInteractorImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008BBE092A20DD440046DE7A /* ObjectListViewInteractorImp.swift */; };
+		008BBE0F2A20DDAC0046DE7A /* ObjectListViewWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008BBE0E2A20DDAC0046DE7A /* ObjectListViewWorker.swift */; };
+		008BBE112A20DDB30046DE7A /* ObjectListViewWorkerImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008BBE102A20DDB30046DE7A /* ObjectListViewWorkerImp.swift */; };
+		008BBE182A20E1090046DE7A /* MockViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008BBE152A20E1090046DE7A /* MockViewPresenter.swift */; };
+		008BBE192A20E1090046DE7A /* MockViewUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008BBE162A20E1090046DE7A /* MockViewUpdater.swift */; };
+		008BBE1A2A20E1090046DE7A /* MockViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008BBE172A20E1090046DE7A /* MockViewRouter.swift */; };
+		008BBE1D2A20E1540046DE7A /* MockViewControllerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008BBE1C2A20E1540046DE7A /* MockViewControllerPresenter.swift */; };
+		008BBE202A20E19C0046DE7A /* EventProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008BBE1F2A20E19C0046DE7A /* EventProcessor.swift */; };
+		008BBE282A20E2EE0046DE7A /* MockProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008BBE272A20E2EE0046DE7A /* MockProtocols.swift */; };
+		008BBE2A2A20E3530046DE7A /* ObjectListViewInteractorImpTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008BBE292A20E3530046DE7A /* ObjectListViewInteractorImpTests.swift */; };
+		008BBE2D2A20E3D80046DE7A /* MockObjectListViewWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008BBE2C2A20E3D80046DE7A /* MockObjectListViewWorker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,7 +70,6 @@
 		008BBDB92A20D79A0046DE7A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		008BBDBB2A20D79A0046DE7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		008BBDC02A20D79A0046DE7A /* RijksmuseumTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RijksmuseumTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		008BBDC42A20D79A0046DE7A /* RijksmuseumTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RijksmuseumTests.swift; sourceTree = "<group>"; };
 		008BBDCA2A20D79A0046DE7A /* RijksmuseumUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RijksmuseumUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		008BBDCE2A20D79A0046DE7A /* RijksmuseumUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RijksmuseumUITests.swift; sourceTree = "<group>"; };
 		008BBDD02A20D79A0046DE7A /* RijksmuseumUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RijksmuseumUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -57,6 +79,31 @@
 		008BBDE12A20D85C0046DE7A /* Interactor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Interactor.swift; sourceTree = "<group>"; };
 		008BBDE22A20D85C0046DE7A /* ViewUpdater.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewUpdater.swift; sourceTree = "<group>"; };
 		008BBDE92A20D8710046DE7A /* ViewState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewState.swift; sourceTree = "<group>"; };
+		008BBDEF2A20D9D00046DE7A /* ArtObjectSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtObjectSummary.swift; sourceTree = "<group>"; };
+		008BBDF12A20D9F30046DE7A /* ArtObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtObject.swift; sourceTree = "<group>"; };
+		008BBDF42A20DA4B0046DE7A /* ObjectListViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectListViewRouter.swift; sourceTree = "<group>"; };
+		008BBDF62A20DA750046DE7A /* ObjectListViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectListViewPresenter.swift; sourceTree = "<group>"; };
+		008BBDF82A20DAC10046DE7A /* ObjectListViewInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectListViewInteractor.swift; sourceTree = "<group>"; };
+		008BBDFA2A20DAEF0046DE7A /* ObjectListViewProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectListViewProtocols.swift; sourceTree = "<group>"; };
+		008BBDFD2A20DB8F0046DE7A /* ObjectSummaryCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectSummaryCellViewModel.swift; sourceTree = "<group>"; };
+		008BBE002A20DBFF0046DE7A /* ObjectListViewRouterImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectListViewRouterImp.swift; sourceTree = "<group>"; };
+		008BBE032A20DC510046DE7A /* ViewControllerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerPresenter.swift; sourceTree = "<group>"; };
+		008BBE052A20DC9D0046DE7A /* ObjectListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectListViewController.swift; sourceTree = "<group>"; };
+		008BBE072A20DD1E0046DE7A /* ObjectListViewPresenterImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectListViewPresenterImp.swift; sourceTree = "<group>"; };
+		008BBE092A20DD440046DE7A /* ObjectListViewInteractorImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectListViewInteractorImp.swift; sourceTree = "<group>"; };
+		008BBE0E2A20DDAC0046DE7A /* ObjectListViewWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectListViewWorker.swift; sourceTree = "<group>"; };
+		008BBE102A20DDB30046DE7A /* ObjectListViewWorkerImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectListViewWorkerImp.swift; sourceTree = "<group>"; };
+		008BBE152A20E1090046DE7A /* MockViewPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockViewPresenter.swift; sourceTree = "<group>"; };
+		008BBE162A20E1090046DE7A /* MockViewUpdater.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockViewUpdater.swift; sourceTree = "<group>"; };
+		008BBE172A20E1090046DE7A /* MockViewRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockViewRouter.swift; sourceTree = "<group>"; };
+		008BBE1C2A20E1540046DE7A /* MockViewControllerPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockViewControllerPresenter.swift; sourceTree = "<group>"; };
+		008BBE1F2A20E19C0046DE7A /* EventProcessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventProcessor.swift; sourceTree = "<group>"; };
+		008BBE232A20E2250046DE7A /* ObjectListViewRouterImpTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectListViewRouterImpTests.swift; sourceTree = "<group>"; };
+		008BBE252A20E2720046DE7A /* ObjectListViewPresenterImpTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectListViewPresenterImpTests.swift; sourceTree = "<group>"; };
+		008BBE272A20E2EE0046DE7A /* MockProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockProtocols.swift; sourceTree = "<group>"; };
+		008BBE292A20E3530046DE7A /* ObjectListViewInteractorImpTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectListViewInteractorImpTests.swift; sourceTree = "<group>"; };
+		008BBE2C2A20E3D80046DE7A /* MockObjectListViewWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockObjectListViewWorker.swift; sourceTree = "<group>"; };
+		00EC56E42A20E61A002E2AC5 /* Rijksmuseum.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = Rijksmuseum.xctestplan; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +134,7 @@
 		008BBDA12A20D7990046DE7A = {
 			isa = PBXGroup;
 			children = (
+				00EC56E42A20E61A002E2AC5 /* Rijksmuseum.xctestplan */,
 				008BBDAC2A20D7990046DE7A /* Rijksmuseum */,
 				008BBDC32A20D79A0046DE7A /* RijksmuseumTests */,
 				008BBDCD2A20D79A0046DE7A /* RijksmuseumUITests */,
@@ -107,9 +155,11 @@
 		008BBDAC2A20D7990046DE7A /* Rijksmuseum */ = {
 			isa = PBXGroup;
 			children = (
-				008BBDEB2A20D8B90046DE7A /* Screens */,
-				008BBDE82A20D8680046DE7A /* Enums */,
+				008BBE022A20DC460046DE7A /* Protocols */,
 				008BBDDD2A20D8400046DE7A /* Architecture Protocols */,
+				008BBDE82A20D8680046DE7A /* Enums */,
+				008BBDEE2A20D9720046DE7A /* Models */,
+				008BBDEB2A20D8B90046DE7A /* Screens */,
 				008BBDAD2A20D7990046DE7A /* AppDelegate.swift */,
 				008BBDAF2A20D7990046DE7A /* SceneDelegate.swift */,
 				008BBDB62A20D79A0046DE7A /* Assets.xcassets */,
@@ -122,7 +172,10 @@
 		008BBDC32A20D79A0046DE7A /* RijksmuseumTests */ = {
 			isa = PBXGroup;
 			children = (
-				008BBDC42A20D79A0046DE7A /* RijksmuseumTests.swift */,
+				008BBE142A20E1090046DE7A /* Mock Architecture */,
+				008BBE1B2A20E13F0046DE7A /* Mocks */,
+				008BBE1E2A20E19C0046DE7A /* Enums */,
+				008BBE212A20E1F40046DE7A /* Screens */,
 			);
 			path = RijksmuseumTests;
 			sourceTree = "<group>";
@@ -168,6 +221,10 @@
 		008BBDEC2A20D8BE0046DE7A /* Object List */ = {
 			isa = PBXGroup;
 			children = (
+				008BBE0B2A20DD780046DE7A /* Workers */,
+				008BBDFC2A20DB550046DE7A /* View Models */,
+				008BBDF32A20DA2B0046DE7A /* Protocols */,
+				008BBDFF2A20DBD90046DE7A /* Implementation */,
 			);
 			path = "Object List";
 			sourceTree = "<group>";
@@ -177,6 +234,132 @@
 			children = (
 			);
 			path = "Object Details";
+			sourceTree = "<group>";
+		};
+		008BBDEE2A20D9720046DE7A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				008BBDEF2A20D9D00046DE7A /* ArtObjectSummary.swift */,
+				008BBDF12A20D9F30046DE7A /* ArtObject.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		008BBDF32A20DA2B0046DE7A /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				008BBDF42A20DA4B0046DE7A /* ObjectListViewRouter.swift */,
+				008BBDF62A20DA750046DE7A /* ObjectListViewPresenter.swift */,
+				008BBDF82A20DAC10046DE7A /* ObjectListViewInteractor.swift */,
+				008BBDFA2A20DAEF0046DE7A /* ObjectListViewProtocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		008BBDFC2A20DB550046DE7A /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				008BBDFD2A20DB8F0046DE7A /* ObjectSummaryCellViewModel.swift */,
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		008BBDFF2A20DBD90046DE7A /* Implementation */ = {
+			isa = PBXGroup;
+			children = (
+				008BBE052A20DC9D0046DE7A /* ObjectListViewController.swift */,
+				008BBE002A20DBFF0046DE7A /* ObjectListViewRouterImp.swift */,
+				008BBE072A20DD1E0046DE7A /* ObjectListViewPresenterImp.swift */,
+				008BBE092A20DD440046DE7A /* ObjectListViewInteractorImp.swift */,
+			);
+			path = Implementation;
+			sourceTree = "<group>";
+		};
+		008BBE022A20DC460046DE7A /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				008BBE032A20DC510046DE7A /* ViewControllerPresenter.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		008BBE0B2A20DD780046DE7A /* Workers */ = {
+			isa = PBXGroup;
+			children = (
+				008BBE0C2A20DD8D0046DE7A /* Protocols */,
+				008BBE0D2A20DD950046DE7A /* Implementation */,
+			);
+			path = Workers;
+			sourceTree = "<group>";
+		};
+		008BBE0C2A20DD8D0046DE7A /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				008BBE0E2A20DDAC0046DE7A /* ObjectListViewWorker.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		008BBE0D2A20DD950046DE7A /* Implementation */ = {
+			isa = PBXGroup;
+			children = (
+				008BBE102A20DDB30046DE7A /* ObjectListViewWorkerImp.swift */,
+			);
+			path = Implementation;
+			sourceTree = "<group>";
+		};
+		008BBE142A20E1090046DE7A /* Mock Architecture */ = {
+			isa = PBXGroup;
+			children = (
+				008BBE152A20E1090046DE7A /* MockViewPresenter.swift */,
+				008BBE162A20E1090046DE7A /* MockViewUpdater.swift */,
+				008BBE172A20E1090046DE7A /* MockViewRouter.swift */,
+			);
+			path = "Mock Architecture";
+			sourceTree = "<group>";
+		};
+		008BBE1B2A20E13F0046DE7A /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				008BBE1C2A20E1540046DE7A /* MockViewControllerPresenter.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		008BBE1E2A20E19C0046DE7A /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				008BBE1F2A20E19C0046DE7A /* EventProcessor.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		008BBE212A20E1F40046DE7A /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				008BBE222A20E1FC0046DE7A /* Object List */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		008BBE222A20E1FC0046DE7A /* Object List */ = {
+			isa = PBXGroup;
+			children = (
+				008BBE2B2A20E3CA0046DE7A /* Workers */,
+				008BBE272A20E2EE0046DE7A /* MockProtocols.swift */,
+				008BBE232A20E2250046DE7A /* ObjectListViewRouterImpTests.swift */,
+				008BBE252A20E2720046DE7A /* ObjectListViewPresenterImpTests.swift */,
+				008BBE292A20E3530046DE7A /* ObjectListViewInteractorImpTests.swift */,
+			);
+			path = "Object List";
+			sourceTree = "<group>";
+		};
+		008BBE2B2A20E3CA0046DE7A /* Workers */ = {
+			isa = PBXGroup;
+			children = (
+				008BBE2C2A20E3D80046DE7A /* MockObjectListViewWorker.swift */,
+			);
+			path = Workers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -309,14 +492,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				008BBDFE2A20DB8F0046DE7A /* ObjectSummaryCellViewModel.swift in Sources */,
+				008BBE042A20DC510046DE7A /* ViewControllerPresenter.swift in Sources */,
 				008BBDAE2A20D7990046DE7A /* AppDelegate.swift in Sources */,
 				008BBDB02A20D7990046DE7A /* SceneDelegate.swift in Sources */,
+				008BBDF72A20DA750046DE7A /* ObjectListViewPresenter.swift in Sources */,
+				008BBE0F2A20DDAC0046DE7A /* ObjectListViewWorker.swift in Sources */,
 				008BBDE32A20D85C0046DE7A /* ActionListener.swift in Sources */,
+				008BBE082A20DD1E0046DE7A /* ObjectListViewPresenterImp.swift in Sources */,
 				008BBDE72A20D85C0046DE7A /* ViewUpdater.swift in Sources */,
+				008BBDFB2A20DAEF0046DE7A /* ObjectListViewProtocols.swift in Sources */,
 				008BBDEA2A20D8710046DE7A /* ViewState.swift in Sources */,
 				008BBDE52A20D85C0046DE7A /* Router.swift in Sources */,
+				008BBDF92A20DAC10046DE7A /* ObjectListViewInteractor.swift in Sources */,
+				008BBE062A20DC9D0046DE7A /* ObjectListViewController.swift in Sources */,
+				008BBE0A2A20DD440046DE7A /* ObjectListViewInteractorImp.swift in Sources */,
+				008BBDF52A20DA4B0046DE7A /* ObjectListViewRouter.swift in Sources */,
+				008BBE112A20DDB30046DE7A /* ObjectListViewWorkerImp.swift in Sources */,
+				008BBDF22A20D9F30046DE7A /* ArtObject.swift in Sources */,
 				008BBDE62A20D85C0046DE7A /* Interactor.swift in Sources */,
+				008BBE012A20DBFF0046DE7A /* ObjectListViewRouterImp.swift in Sources */,
 				008BBDE42A20D85C0046DE7A /* Presenter.swift in Sources */,
+				008BBDF02A20D9D00046DE7A /* ArtObjectSummary.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,7 +521,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				008BBDC52A20D79A0046DE7A /* RijksmuseumTests.swift in Sources */,
+				008BBE2A2A20E3530046DE7A /* ObjectListViewInteractorImpTests.swift in Sources */,
+				008BBE1A2A20E1090046DE7A /* MockViewRouter.swift in Sources */,
+				008BBE182A20E1090046DE7A /* MockViewPresenter.swift in Sources */,
+				008BBE192A20E1090046DE7A /* MockViewUpdater.swift in Sources */,
+				008BBE282A20E2EE0046DE7A /* MockProtocols.swift in Sources */,
+				008BBE2D2A20E3D80046DE7A /* MockObjectListViewWorker.swift in Sources */,
+				0049042D2A20F4A900D1085B /* ObjectListViewPresenterImpTests.swift in Sources */,
+				0049042F2A20F54F00D1085B /* ObjectListViewRouterImpTests.swift in Sources */,
+				008BBE1D2A20E1540046DE7A /* MockViewControllerPresenter.swift in Sources */,
+				008BBE202A20E19C0046DE7A /* EventProcessor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

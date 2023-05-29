@@ -13,5 +13,6 @@ protocol Presenter<Event> {
 
     var viewUpdater: ViewUpdaterType? { get }
     
+    @MainActor
     func process(event: Event)
 }

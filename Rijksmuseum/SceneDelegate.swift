@@ -15,10 +15,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene: windowScene)
         
-        let vc = UIViewController()
-        vc.view.backgroundColor = .orange
+        let router = ObjectListViewRouterImp<UINavigationController>()
+        let navController = router.setup()
         
-        window.rootViewController = vc
+        window.rootViewController = navController
         window.makeKeyAndVisible()
         
         self.window = window
