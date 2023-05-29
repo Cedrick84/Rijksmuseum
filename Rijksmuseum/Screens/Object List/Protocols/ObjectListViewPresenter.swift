@@ -9,8 +9,9 @@ import Foundation
 
 enum ObjectListViewPresenterEvent {
     case loading
+    case partiallyLoaded([ArtObjectSummary])
     case loaded([ArtObjectSummary])
-    case error(Error)
+    case error(APIError)
 }
 
 protocol ObjectListViewPresenter: Presenter<ObjectListViewPresenterEvent> where ViewUpdaterType: ObjectListViewUpdater {}

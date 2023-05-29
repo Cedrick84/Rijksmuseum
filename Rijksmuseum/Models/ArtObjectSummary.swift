@@ -7,4 +7,7 @@
 
 import Foundation
 
-struct ArtObjectSummary: Equatable {}
+struct ArtObjectSummary: Equatable, Decodable {
+    
+    let title: String
+}

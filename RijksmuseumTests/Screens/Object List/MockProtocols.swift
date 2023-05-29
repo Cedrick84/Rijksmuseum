@@ -8,6 +8,6 @@
 import Foundation
 @testable import Rijksmuseum
 
-extension MockViewUpdater<ViewState<[ObjectSummaryCellViewModel]>>: ObjectListViewUpdater {}
-extension MockViewPresenter<ObjectListViewPresenterEvent, ViewState<[ObjectSummaryCellViewModel]>>: ObjectListViewPresenter {}
+extension MockViewUpdater<PaginatedViewState<[ObjectSummaryCellViewModel]>>: ObjectListViewUpdater {}
+extension MockViewPresenter<ObjectListViewPresenterEvent, PaginatedViewState<[ObjectSummaryCellViewModel]>>: ObjectListViewPresenter {}
 extension MockViewRouter<ObjectListViewRouterAction>: ObjectListViewRouter {}

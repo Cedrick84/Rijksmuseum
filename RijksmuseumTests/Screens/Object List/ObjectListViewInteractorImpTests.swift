@@ -20,7 +20,7 @@ final class ObjectListViewInteractorImpTests: XCTestCase {
         
         let workerResponse: [ArtObjectSummary] = []
         let router = MockViewRouter<ObjectListViewRouterAction>(eventProcessor: .none)
-        let presenter = MockViewPresenter<ObjectListViewPresenterEvent, ViewState<[ObjectSummaryCellViewModel]>>(eventProcessor:
+        let presenter = MockViewPresenter<ObjectListViewPresenterEvent, PaginatedViewState<[ObjectSummaryCellViewModel]>>(eventProcessor:
                 .events([{ event in
                     guard case .loading = event else {
                         XCTFail("Expected loading event but got \(event).")
@@ -65,7 +65,7 @@ final class ObjectListViewInteractorImpTests: XCTestCase {
         let presenterCompletedExpectation = expectation(description: "Presented completed.")
         
         let router = MockViewRouter<ObjectListViewRouterAction>(eventProcessor: .none)
-        let presenter = MockViewPresenter<ObjectListViewPresenterEvent, ViewState<[ObjectSummaryCellViewModel]>>(eventProcessor:
+        let presenter = MockViewPresenter<ObjectListViewPresenterEvent, PaginatedViewState<[ObjectSummaryCellViewModel]>>(eventProcessor:
                 .events([{ event in
                     guard case .loading = event else {
                         XCTFail("Expected loading event but got \(event).")
@@ -112,7 +112,7 @@ final class ObjectListViewInteractorImpTests: XCTestCase {
             routerCalledExpectation.fulfill()
         }], routerCompletedExpectation))
         
-        let presenter = MockViewPresenter<ObjectListViewPresenterEvent, ViewState<[ObjectSummaryCellViewModel]>>(eventProcessor: .none)
+        let presenter = MockViewPresenter<ObjectListViewPresenterEvent, PaginatedViewState<[ObjectSummaryCellViewModel]>>(eventProcessor: .none)
         let worker = MockObjectListViewWorker()
         
         let interactor = ObjectListViewInteractorImp(router: router, presenter: presenter, worker: worker)

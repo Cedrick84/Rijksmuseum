@@ -14,7 +14,7 @@ final class ObjectListViewPresenterImpTests: XCTestCase {
     func test_onProcessEvent_callsViewUpdater() throws {
         let errorDescription = UUID().uuidString
         let error = NSError(domain: "", code: 1, userInfo: [NSLocalizedDescriptionKey: errorDescription])
-        let mapping: [(event: ObjectListViewPresenterEvent, state: ViewState<[ObjectSummaryCellViewModel]>)] = [
+        let mapping: [(event: ObjectListViewPresenterEvent, state: PaginatedViewState<[ObjectSummaryCellViewModel]>)] = [
             (.loading, .loading),
             (.loaded([]), .empty),
             (.loaded([.init()]), .loaded([.init()])),
@@ -25,7 +25,7 @@ final class ObjectListViewPresenterImpTests: XCTestCase {
             let viewUpdaterCalledExpectation = expectation(description: "View updater called.")
             let viewUpdaterCompletedExpectation = expectation(description: "View updater completed.")
             
-            let viewUpdater = MockViewUpdater<ViewState<[ObjectSummaryCellViewModel]>>(eventProcessor: .events([{ state in
+            let viewUpdater = MockViewUpdater<PaginatedViewState<[ObjectSummaryCellViewModel]>>(eventProcessor: .events([{ state in
                 guard tuple.state == state else {
                     XCTFail("Expected \(tuple.state) but got \(state).")
                     return

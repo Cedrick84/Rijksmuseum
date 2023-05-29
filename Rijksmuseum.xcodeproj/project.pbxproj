@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		002B0B452A249B3800C38CCB /* ArtObjectSummaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002B0B442A249B3800C38CCB /* ArtObjectSummaryCell.swift */; };
+		002B0B4A2A249D9600C38CCB /* LoadingFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002B0B492A249D9600C38CCB /* LoadingFooterView.swift */; };
+		002B0B4D2A24BCB300C38CCB /* UICollectionView+Dequeue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002B0B4C2A24BCB300C38CCB /* UICollectionView+Dequeue.swift */; };
+		002B0B4F2A24BF3100C38CCB /* PaginatedViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002B0B4E2A24BF3100C38CCB /* PaginatedViewState.swift */; };
+		002B0B522A24C0C900C38CCB /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002B0B512A24C0C900C38CCB /* APIClient.swift */; };
+		002B0B562A24C1C900C38CCB /* APIClientImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002B0B552A24C1C900C38CCB /* APIClientImp.swift */; };
 		0049042D2A20F4A900D1085B /* ObjectListViewPresenterImpTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008BBE252A20E2720046DE7A /* ObjectListViewPresenterImpTests.swift */; };
 		0049042F2A20F54F00D1085B /* ObjectListViewRouterImpTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008BBE232A20E2250046DE7A /* ObjectListViewRouterImpTests.swift */; };
 		008BBDAE2A20D7990046DE7A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008BBDAD2A20D7990046DE7A /* AppDelegate.swift */; };
@@ -43,6 +49,7 @@
 		008BBE282A20E2EE0046DE7A /* MockProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008BBE272A20E2EE0046DE7A /* MockProtocols.swift */; };
 		008BBE2A2A20E3530046DE7A /* ObjectListViewInteractorImpTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008BBE292A20E3530046DE7A /* ObjectListViewInteractorImpTests.swift */; };
 		008BBE2D2A20E3D80046DE7A /* MockObjectListViewWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008BBE2C2A20E3D80046DE7A /* MockObjectListViewWorker.swift */; };
+		00A117F82A24C81B00B56929 /* CollectionListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A117F72A24C81B00B56929 /* CollectionListResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +70,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		002B0B442A249B3800C38CCB /* ArtObjectSummaryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtObjectSummaryCell.swift; sourceTree = "<group>"; };
+		002B0B492A249D9600C38CCB /* LoadingFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingFooterView.swift; sourceTree = "<group>"; };
+		002B0B4C2A24BCB300C38CCB /* UICollectionView+Dequeue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Dequeue.swift"; sourceTree = "<group>"; };
+		002B0B4E2A24BF3100C38CCB /* PaginatedViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginatedViewState.swift; sourceTree = "<group>"; };
+		002B0B512A24C0C900C38CCB /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		002B0B552A24C1C900C38CCB /* APIClientImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientImp.swift; sourceTree = "<group>"; };
 		008BBDAA2A20D7990046DE7A /* Rijksmuseum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rijksmuseum.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		008BBDAD2A20D7990046DE7A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		008BBDAF2A20D7990046DE7A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -103,6 +116,7 @@
 		008BBE272A20E2EE0046DE7A /* MockProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockProtocols.swift; sourceTree = "<group>"; };
 		008BBE292A20E3530046DE7A /* ObjectListViewInteractorImpTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectListViewInteractorImpTests.swift; sourceTree = "<group>"; };
 		008BBE2C2A20E3D80046DE7A /* MockObjectListViewWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockObjectListViewWorker.swift; sourceTree = "<group>"; };
+		00A117F72A24C81B00B56929 /* CollectionListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionListResponse.swift; sourceTree = "<group>"; };
 		00EC56E42A20E61A002E2AC5 /* Rijksmuseum.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = Rijksmuseum.xctestplan; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -131,6 +145,73 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		002B0B432A249B1B00C38CCB /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				002B0B442A249B3800C38CCB /* ArtObjectSummaryCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		002B0B462A249D6F00C38CCB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				002B0B482A249D7A00C38CCB /* UICollectionView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		002B0B472A249D7500C38CCB /* Footers */ = {
+			isa = PBXGroup;
+			children = (
+				002B0B492A249D9600C38CCB /* LoadingFooterView.swift */,
+			);
+			path = Footers;
+			sourceTree = "<group>";
+		};
+		002B0B482A249D7A00C38CCB /* UICollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				002B0B432A249B1B00C38CCB /* Cells */,
+				002B0B472A249D7500C38CCB /* Footers */,
+			);
+			path = UICollectionView;
+			sourceTree = "<group>";
+		};
+		002B0B4B2A24BC9D00C38CCB /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				002B0B4C2A24BCB300C38CCB /* UICollectionView+Dequeue.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		002B0B502A24C0A300C38CCB /* API */ = {
+			isa = PBXGroup;
+			children = (
+				002B0B532A24C0F500C38CCB /* Protocol */,
+				002B0B542A24C16B00C38CCB /* Implementation */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		002B0B532A24C0F500C38CCB /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				002B0B512A24C0C900C38CCB /* APIClient.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		002B0B542A24C16B00C38CCB /* Implementation */ = {
+			isa = PBXGroup;
+			children = (
+				00A117F62A24C7F400B56929 /* Responses */,
+				002B0B552A24C1C900C38CCB /* APIClientImp.swift */,
+			);
+			path = Implementation;
+			sourceTree = "<group>";
+		};
 		008BBDA12A20D7990046DE7A = {
 			isa = PBXGroup;
 			children = (
@@ -155,8 +236,10 @@
 		008BBDAC2A20D7990046DE7A /* Rijksmuseum */ = {
 			isa = PBXGroup;
 			children = (
-				008BBE022A20DC460046DE7A /* Protocols */,
 				008BBDDD2A20D8400046DE7A /* Architecture Protocols */,
+				002B0B502A24C0A300C38CCB /* API */,
+				002B0B4B2A24BC9D00C38CCB /* Extensions */,
+				008BBE022A20DC460046DE7A /* Protocols */,
 				008BBDE82A20D8680046DE7A /* Enums */,
 				008BBDEE2A20D9720046DE7A /* Models */,
 				008BBDEB2A20D8B90046DE7A /* Screens */,
@@ -205,6 +288,7 @@
 			isa = PBXGroup;
 			children = (
 				008BBDE92A20D8710046DE7A /* ViewState.swift */,
+				002B0B4E2A24BF3100C38CCB /* PaginatedViewState.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -221,10 +305,11 @@
 		008BBDEC2A20D8BE0046DE7A /* Object List */ = {
 			isa = PBXGroup;
 			children = (
-				008BBE0B2A20DD780046DE7A /* Workers */,
-				008BBDFC2A20DB550046DE7A /* View Models */,
+				002B0B462A249D6F00C38CCB /* Views */,
 				008BBDF32A20DA2B0046DE7A /* Protocols */,
 				008BBDFF2A20DBD90046DE7A /* Implementation */,
+				008BBDFC2A20DB550046DE7A /* View Models */,
+				008BBE0B2A20DD780046DE7A /* Workers */,
 			);
 			path = "Object List";
 			sourceTree = "<group>";
@@ -362,6 +447,14 @@
 			path = Workers;
 			sourceTree = "<group>";
 		};
+		00A117F62A24C7F400B56929 /* Responses */ = {
+			isa = PBXGroup;
+			children = (
+				00A117F72A24C81B00B56929 /* CollectionListResponse.swift */,
+			);
+			path = Responses;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -494,13 +587,19 @@
 			files = (
 				008BBDFE2A20DB8F0046DE7A /* ObjectSummaryCellViewModel.swift in Sources */,
 				008BBE042A20DC510046DE7A /* ViewControllerPresenter.swift in Sources */,
+				00A117F82A24C81B00B56929 /* CollectionListResponse.swift in Sources */,
+				002B0B522A24C0C900C38CCB /* APIClient.swift in Sources */,
+				002B0B452A249B3800C38CCB /* ArtObjectSummaryCell.swift in Sources */,
+				002B0B562A24C1C900C38CCB /* APIClientImp.swift in Sources */,
 				008BBDAE2A20D7990046DE7A /* AppDelegate.swift in Sources */,
 				008BBDB02A20D7990046DE7A /* SceneDelegate.swift in Sources */,
 				008BBDF72A20DA750046DE7A /* ObjectListViewPresenter.swift in Sources */,
 				008BBE0F2A20DDAC0046DE7A /* ObjectListViewWorker.swift in Sources */,
 				008BBDE32A20D85C0046DE7A /* ActionListener.swift in Sources */,
+				002B0B4F2A24BF3100C38CCB /* PaginatedViewState.swift in Sources */,
 				008BBE082A20DD1E0046DE7A /* ObjectListViewPresenterImp.swift in Sources */,
 				008BBDE72A20D85C0046DE7A /* ViewUpdater.swift in Sources */,
+				002B0B4D2A24BCB300C38CCB /* UICollectionView+Dequeue.swift in Sources */,
 				008BBDFB2A20DAEF0046DE7A /* ObjectListViewProtocols.swift in Sources */,
 				008BBDEA2A20D8710046DE7A /* ViewState.swift in Sources */,
 				008BBDE52A20D85C0046DE7A /* Router.swift in Sources */,
@@ -509,6 +608,7 @@
 				008BBE0A2A20DD440046DE7A /* ObjectListViewInteractorImp.swift in Sources */,
 				008BBDF52A20DA4B0046DE7A /* ObjectListViewRouter.swift in Sources */,
 				008BBE112A20DDB30046DE7A /* ObjectListViewWorkerImp.swift in Sources */,
+				002B0B4A2A249D9600C38CCB /* LoadingFooterView.swift in Sources */,
 				008BBDF22A20D9F30046DE7A /* ArtObject.swift in Sources */,
 				008BBDE62A20D85C0046DE7A /* Interactor.swift in Sources */,
 				008BBE012A20DBFF0046DE7A /* ObjectListViewRouterImp.swift in Sources */,

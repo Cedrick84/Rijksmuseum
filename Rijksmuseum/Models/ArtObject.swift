@@ -7,4 +7,4 @@
 
 import Foundation
 
-struct ArtObject: Equatable {}
+struct ArtObject: Equatable, Decodable {}

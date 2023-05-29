@@ -8,5 +8,5 @@
 import Foundation
 
 protocol ObjectListViewWorker {
-    func loadListItems() async throws -> [ArtObjectSummary]
+    func loadListItems(for page: Int, with size: Int) async throws -> [ArtObjectSummary]
 }

@@ -9,7 +9,13 @@ import Foundation
 
 struct ObjectListViewWorkerImp: ObjectListViewWorker {
     
-    func loadListItems() async throws -> [ArtObjectSummary] {
-        return [] // TODO: Implement
+    private let apiClient: APIClient
+    
+    init(apiClient: APIClient = APIClientImp()) {
+        self.apiClient = apiClient
+    }
+    
+    func loadListItems(for page: Int, with size: Int) async throws -> [ArtObjectSummary] {
+        return try await apiClient.getObjectSummaries(for: page, with: size)
     }
 }

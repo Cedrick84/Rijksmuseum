@@ -11,8 +11,10 @@ final class ObjectListViewInteractorImp<Presenter: ObjectListViewPresenter, Rout
 
     var router: Router?
     let presenter: Presenter
+    
     private let worker: ObjectListViewWorker
-
+    private var summaries: [ArtObjectSummary] = []
+    
     init(router: Router,
          presenter: Presenter,
          worker: ObjectListViewWorker = ObjectListViewWorkerImp()) {
@@ -24,24 +26,47 @@ final class ObjectListViewInteractorImp<Presenter: ObjectListViewPresenter, Rout
 
     func handle(action: ObjectListViewAction) {
         switch action {
-        case .requestList:
-            requestList()
+        case .requestObjects:
+            requestObjects()
         case .openDetails:
             router?.handle(action: .openDetails)
         }
     }
 
     @MainActor
-    private func requestList() {
+    private func requestObjects() {
         presenter.process(event: .loading)
         
         Task {
             do {
-                let items = try await worker.loadListItems()
-                presenter.process(event: .loaded(items))
+                let pageSize = 20
+                let page = summaries.count / pageSize
+                
+                let items = try await worker.loadListItems(for: page, with: pageSize)
+                if items.isEmpty && summaries.isEmpty {
+                    presenter.process(event: .loaded([]))
+                } else {
+                    if items.isEmpty {
+                        presenter.process(event: .loaded(summaries))
+                    } else {
+                        summaries += items
+                        
+                        if items.count == pageSize {
+                            presenter.process(event: .partiallyLoaded(summaries))
+                        } else {
+                            presenter.process(event: .loaded(summaries))
+                        }
+                    }
+                }
             } catch {
-                presenter.process(event: .error(error))
-            }
+                guard let apiError = error as? APIError else {
+                    assertionFailure("Expected an APIError but got \(error).")
+                    presenter.process(event: .error(.unknown))
+                    return
+                }
+                
+                presenter.process(event: .error(apiError))
+            } 
         }
     }
 }

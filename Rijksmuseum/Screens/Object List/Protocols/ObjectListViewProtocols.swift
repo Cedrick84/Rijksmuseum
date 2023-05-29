@@ -11,4 +11,4 @@ protocol ObjectListViewActionListener {
     var actionListener: (any ActionListener<ObjectListViewAction>)? { get set }
 }
 
-protocol ObjectListViewUpdater: ViewUpdater<ViewState<[ObjectSummaryCellViewModel]>> {}
+protocol ObjectListViewUpdater: ViewUpdater<PaginatedViewState<[ObjectSummaryCellViewModel]>> {}

@@ -8,8 +8,8 @@
 import Foundation
 
 enum ObjectListViewAction {
-    case requestList
-    case openDetails
+    case requestObjects
+    case openDetails(id: String)
 }
 
 protocol ObjectListViewInteractor: Interactor<ObjectListViewAction> where PresenterType: ObjectListViewPresenter {}
