@@ -12,13 +12,14 @@ import XCTest
 final class ObjectListViewPresenterImpTests: XCTestCase {
 
     func test_onProcessEvent_callsViewUpdater() throws {
-        let errorDescription = UUID().uuidString
-        let error = NSError(domain: "", code: 1, userInfo: [NSLocalizedDescriptionKey: errorDescription])
+        let id = UUID().uuidString
+        
         let mapping: [(event: ObjectListViewPresenterEvent, state: PaginatedViewState<[ObjectSummaryCellViewModel]>)] = [
             (.loading, .loading),
             (.loaded([]), .empty),
-            (.loaded([.init()]), .loaded([.init()])),
-            (.error(error), .error(errorDescription))
+            (.partiallyLoaded([.init(id: id, title: "")]), .partiallyLoaded([.init(id: id, title: "")])),
+            (.loaded([.init(id: id, title: "")]), .loaded([.init(id: id, title: "")])),
+            (.error(.decoding), .error(APIError.decoding.message))
         ]
         
         mapping.forEach { tuple in

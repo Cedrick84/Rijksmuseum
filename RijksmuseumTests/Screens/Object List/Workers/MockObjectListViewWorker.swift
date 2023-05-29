@@ -10,16 +10,16 @@ import XCTest
 
 class MockObjectListViewWorker: ObjectListViewWorker {
     
-    var onLoadListItems: (() -> Void)?
+    var onLoadListItems: ((Int, Int) -> Void)?
     var loadListItemsResult: Result<[ArtObjectSummary], Error>?
     
-    func loadListItems() async throws -> [ArtObjectSummary] {
+    func loadListItems(for page: Int, with size: Int) async throws -> [ArtObjectSummary] {
         guard let loadListItemsResult else {
             XCTFail("\(#function) called without having a response defined.")
             return []
         }
         
-        onLoadListItems?()
+        onLoadListItems?(page, size)
         
         switch loadListItemsResult {
         case .success(let items):

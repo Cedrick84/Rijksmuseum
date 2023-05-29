@@ -8,12 +8,15 @@
 import Foundation
 
 struct ObjectSummaryCellViewModel: Equatable {
+    
+    let id: String
     let title: String
 }
 
 extension ObjectSummaryCellViewModel {
     
     init(_ summary: ArtObjectSummary) {
+        id = summary.id
         title = summary.title
     }
 }

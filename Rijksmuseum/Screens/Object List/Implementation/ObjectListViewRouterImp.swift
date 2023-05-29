@@ -25,11 +25,9 @@ final class ObjectListViewRouterImp<VCPresenter: ViewControllerPresenter>: Objec
     
     func handle(action: ObjectListViewRouterAction) {
         switch action {
-        case .openDetails:
-            let vc = UIViewController()
-            vc.view.backgroundColor = .red
-            
-            viewControllerPresenter?.present(viewController: vc)
+        case .openDetails(let id):
+            guard let viewControllerPresenter else { return }
+            ObjectDetailsViewRouterImp(viewControllerPresenter: viewControllerPresenter, objectID: id).present()
         }
     }
 }

@@ -26,10 +26,8 @@ final class ObjectListViewInteractorImp<Presenter: ObjectListViewPresenter, Rout
 
     func handle(action: ObjectListViewAction) {
         switch action {
-        case .requestObjects:
-            requestObjects()
-        case .openDetails:
-            router?.handle(action: .openDetails)
+        case .requestObjects: requestObjects()
+        case .openDetails(let id): router?.handle(action: .openDetails(id: id))
         }
     }
 

@@ -20,7 +20,7 @@ struct APIClientImp: APIClient {
         case details(id: String)
         
         private var baseURL: String { "https://www.rijksmuseum.nl/api/nl/" }
-        private var apiKey: String { "0fiuZFh4" } // TODO: Document
+        private var apiKey: String { "0fiuZFh4" }
         
         var url: URL {
             switch self {
@@ -30,23 +30,34 @@ struct APIClientImp: APIClient {
                 return URL(string: "\(baseURL)collection/\(id)?key=\(apiKey)")!
             }
         }
+        
+        var decodingKeyPath: String {
+            switch self {
+            case .list: return "artObjects"
+            case .details: return "artObject"
+            }
+        }
     }
     
     func getObjectSummaries(for page: Int, with size: Int) async throws -> [ArtObjectSummary] {
-        let response = try await map(object: CollectionListResponse.self, from: Endpoint.list(page: page, size: size).url)
-        return response.objectSummaries
+        let endpoint = Endpoint.list(page: page, size: size)
+        let objects = try await map(object: [ArtObjectSummary].self,
+                                    from: endpoint.url,
+                                    at: endpoint.decodingKeyPath)
+        return objects
     }
     
     func getObjectDetails(with id: String) async throws -> ArtObject {
-        return try await map(object: ArtObject.self, from: Endpoint.details(id: id).url)
+        let endpoint = Endpoint.details(id: id)
+        return try await map(object: ArtObject.self, from: endpoint.url, at: endpoint.decodingKeyPath)
     }
     
-    private func map<T: Decodable>(object: T.Type, from url: URL) async throws -> T {
+    private func map<T: Decodable>(object: T.Type, from url: URL, at keyPath: String) async throws -> T {
         guard let (data, _) = try? await URLSession.shared.data(from: url) else {
             throw APIError.network
         }
         
-        guard let result = try? JSONDecoder().decode(T.self, from: data) else {
+        guard let result = try? JSONDecoder().decode(T.self, from: data, keyPath: keyPath) else {
             throw APIError.decoding
         }
         

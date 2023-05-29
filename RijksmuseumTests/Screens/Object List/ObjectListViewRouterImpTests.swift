@@ -17,13 +17,11 @@ final class ObjectListViewRouterImpTests: XCTestCase {
         let router = ObjectListViewRouterImp<MockViewControllerPresenter>()
         let vcPresenter = router.setup()
         vcPresenter.presentationHandlers = [{ vc in
-            // TODO: Check actual VC
-            XCTAssertEqual(vc.view.backgroundColor, .red)
-            
+            XCTAssertTrue(vc is ObjectDetailsViewController)
             presentedExpectation.fulfill()
         }]
         
-        router.handle(action: .openDetails)
+        router.handle(action: .openDetails(id: ""))
         
         wait(for: [presentedExpectation], timeout: 0.1)
         XCTAssertTrue(vcPresenter.completed)

@@ -8,7 +8,7 @@
 import Foundation
 
 enum ObjectListViewRouterAction {
-    case openDetails
+    case openDetails(id: String)
 }
 
 protocol ObjectListViewRouter: Router<ObjectListViewRouterAction> {}

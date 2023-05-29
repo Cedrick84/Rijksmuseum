@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ObjectListViewController: UIViewController, ObjectListViewActionListener {
+final class ObjectListViewController: UIViewController, ObjectListViewActionListener {
     
     var actionListener: (any ActionListener<ObjectListViewAction>)?
     
@@ -91,7 +91,11 @@ extension ObjectListViewController: UICollectionViewDelegate, UICollectionViewDa
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("details")
+        guard let viewModel = state.items?[indexPath.row] else {
+            fatalError("Trying to get a cell while no items are present.")
+        }
+        
+        actionListener?.handle(action: .openDetails(id: viewModel.id))
     }
 
     func collectionView(_ collectionView: UICollectionView,
