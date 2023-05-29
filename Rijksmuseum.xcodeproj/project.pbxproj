@@ -21,6 +21,7 @@
 		000970B32A24F151005CAAB4 /* APIError+Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000970B22A24F151005CAAB4 /* APIError+Message.swift */; };
 		000970B72A24F7F2005CAAB4 /* JSONDecoder+KeyPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000970B62A24F7F2005CAAB4 /* JSONDecoder+KeyPath.swift */; };
 		000A78982A2522E600C75BA9 /* ObjectListViewPresenterImpTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008BBE252A20E2720046DE7A /* ObjectListViewPresenterImpTests.swift */; };
+		000A789B2A25287500C75BA9 /* ArtObjectsHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000A789A2A25287500C75BA9 /* ArtObjectsHeaderView.swift */; };
 		002B0B452A249B3800C38CCB /* ArtObjectSummaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002B0B442A249B3800C38CCB /* ArtObjectSummaryCell.swift */; };
 		002B0B4A2A249D9600C38CCB /* LoadingFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002B0B492A249D9600C38CCB /* LoadingFooterView.swift */; };
 		002B0B4D2A24BCB300C38CCB /* UICollectionView+Dequeue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002B0B4C2A24BCB300C38CCB /* UICollectionView+Dequeue.swift */; };
@@ -104,6 +105,7 @@
 		000970B02A24EEAF005CAAB4 /* ObjectDetailsViewPresenterImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectDetailsViewPresenterImp.swift; sourceTree = "<group>"; };
 		000970B22A24F151005CAAB4 /* APIError+Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIError+Message.swift"; sourceTree = "<group>"; };
 		000970B62A24F7F2005CAAB4 /* JSONDecoder+KeyPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONDecoder+KeyPath.swift"; sourceTree = "<group>"; };
+		000A789A2A25287500C75BA9 /* ArtObjectsHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtObjectsHeaderView.swift; sourceTree = "<group>"; };
 		002B0B442A249B3800C38CCB /* ArtObjectSummaryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtObjectSummaryCell.swift; sourceTree = "<group>"; };
 		002B0B492A249D9600C38CCB /* LoadingFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingFooterView.swift; sourceTree = "<group>"; };
 		002B0B4C2A24BCB300C38CCB /* UICollectionView+Dequeue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Dequeue.swift"; sourceTree = "<group>"; };
@@ -234,6 +236,14 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		000A78992A25277500C75BA9 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				000A789A2A25287500C75BA9 /* ArtObjectsHeaderView.swift */,
+			);
+			path = Headers;
+			sourceTree = "<group>";
+		};
 		002B0B432A249B1B00C38CCB /* Cells */ = {
 			isa = PBXGroup;
 			children = (
@@ -261,6 +271,7 @@
 		002B0B482A249D7A00C38CCB /* UICollectionView */ = {
 			isa = PBXGroup;
 			children = (
+				000A78992A25277500C75BA9 /* Headers */,
 				002B0B432A249B1B00C38CCB /* Cells */,
 				002B0B472A249D7500C38CCB /* Footers */,
 			);
@@ -736,6 +747,7 @@
 				008BBE0A2A20DD440046DE7A /* ObjectListViewInteractorImp.swift in Sources */,
 				008BBDF52A20DA4B0046DE7A /* ObjectListViewRouter.swift in Sources */,
 				008BBE112A20DDB30046DE7A /* ObjectListViewWorkerImp.swift in Sources */,
+				000A789B2A25287500C75BA9 /* ArtObjectsHeaderView.swift in Sources */,
 				002B0B4A2A249D9600C38CCB /* LoadingFooterView.swift in Sources */,
 				000970B72A24F7F2005CAAB4 /* JSONDecoder+KeyPath.swift in Sources */,
 				008BBDF22A20D9F30046DE7A /* ArtObject.swift in Sources */,

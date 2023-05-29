@@ -179,7 +179,6 @@ final class ObjectListViewInteractorImpTests: XCTestCase {
         
         let firstLoadingExpectation = expectation(description: "First loading event sent.")
         let partiallyLoadedExpectation = expectation(description: "Partially loaded event sent.")
-        let secondLoadingExpectation = expectation(description: "Second loading event sent.")
         let loadedExpectation = expectation(description: "Loaded event sent.")
         let presenterCompletedExpectation = expectation(description: "Presented completed.")
         
@@ -202,13 +201,6 @@ final class ObjectListViewInteractorImpTests: XCTestCase {
                     
                     XCTAssertEqual(items, firstResponse)
                     partiallyLoadedExpectation.fulfill()
-                }, { event in
-                    guard case .loading = event else {
-                        XCTFail("Expected loading event but got \(event).")
-                        return
-                    }
-                    
-                    secondLoadingExpectation.fulfill()
                 }, { event in
                     guard case .loaded(let items) = event else {
                         XCTFail("Expected loaded event but got \(event).")
@@ -236,8 +228,7 @@ final class ObjectListViewInteractorImpTests: XCTestCase {
             interactor.handle(action: .requestObjects)
         }
         
-        await fulfillment(of: [secondLoadingExpectation,
-                               loadedExpectation,
+        await fulfillment(of: [loadedExpectation,
                                presenterCompletedExpectation], timeout: 0.1, enforceOrder: true)
     }
     

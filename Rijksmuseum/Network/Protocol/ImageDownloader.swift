@@ -9,5 +9,5 @@ import UIKit
 
 protocol ImageDownloader {
     
-    func image(for url: URL) async throws -> UIImage
+    func image(for url: URL) async throws -> UIImage?
 }

@@ -33,7 +33,9 @@ final class ObjectListViewInteractorImp<Presenter: ObjectListViewPresenter, Rout
 
     @MainActor
     private func requestObjects() {
-        presenter.process(event: .loading)
+        if summaries.isEmpty {
+            presenter.process(event: .loading)
+        }
         
         Task {
             do {
