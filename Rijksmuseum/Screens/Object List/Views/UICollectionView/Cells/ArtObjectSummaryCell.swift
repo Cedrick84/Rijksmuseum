@@ -11,9 +11,17 @@ class ArtObjectSummaryCell: UICollectionViewCell {
     
     private let imageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.contentMode = .scaleAspectFit
+        imageView.contentMode = .scaleAspectFill
+        imageView.clipsToBounds = true
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
+    }()
+    
+    private let indicator: UIActivityIndicatorView = {
+        let indicator = UIActivityIndicatorView(style: .medium)
+        indicator.translatesAutoresizingMaskIntoConstraints = false
+        
+        return indicator
     }()
     
     private let label: UILabel = {
@@ -28,6 +36,7 @@ class ArtObjectSummaryCell: UICollectionViewCell {
         super.init(frame: frame)
         
         contentView.addSubview(imageView)
+        contentView.addSubview(indicator)
         contentView.addSubview(label)
         
         NSLayoutConstraint.activate([
@@ -36,14 +45,28 @@ class ArtObjectSummaryCell: UICollectionViewCell {
             imageView.widthAnchor.constraint(equalToConstant: 30),
             imageView.heightAnchor.constraint(equalToConstant: 30),
             
+            indicator.centerXAnchor.constraint(equalTo: imageView.centerXAnchor),
+            indicator.centerYAnchor.constraint(equalTo: imageView.centerYAnchor),
+            
             label.leadingAnchor.constraint(equalTo: imageView.trailingAnchor, constant: 10),
             label.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
             label.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -10)
         ])
     }
     
-    func set(viewModel: ObjectSummaryCellViewModel) {
+    func set(viewModel: ObjectSummaryCellViewModel, imageDownloader: ImageDownloader) {
+        imageView.image = nil
+        indicator.startAnimating()
+        
         label.text = viewModel.title
+        
+        Task {
+            let image = try? await imageDownloader.image(for: viewModel.imageURL)
+            await MainActor.run {
+                indicator.stopAnimating()
+                imageView.image = image
+            }
+        }
     }
     
     required init?(coder: NSCoder) {

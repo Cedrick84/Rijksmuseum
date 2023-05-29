@@ -11,8 +11,18 @@ final class ObjectListViewController: UIViewController, ObjectListViewActionList
     
     var actionListener: (any ActionListener<ObjectListViewAction>)?
     
+    private let imageDownloader: ImageDownloader
     private var collectionView: UICollectionView!
     private var state: PaginatedViewState<[ObjectSummaryCellViewModel]> = .empty
+    
+    init(imageDownloader: ImageDownloader = ImageDownloaderImp { $0.resize(to: CGSize(width: 20, height: 20)) }) {
+        self.imageDownloader = imageDownloader
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -85,7 +95,7 @@ extension ObjectListViewController: UICollectionViewDelegate, UICollectionViewDa
         }
         
         let cell: ArtObjectSummaryCell = collectionView.dequeueReusableCell(forIndexPath: indexPath)
-        cell.set(viewModel: viewModel)
+        cell.set(viewModel: viewModel, imageDownloader: imageDownloader)
         
         return cell
     }

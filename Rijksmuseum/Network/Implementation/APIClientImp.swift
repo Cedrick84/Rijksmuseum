@@ -13,11 +13,12 @@ enum APIError: Error {
     case unknown
 }
 
-protocol URLContentRetriever {
+protocol NetworkContentRetriever {
     func data(from url: URL) async throws -> (Data, URLResponse)
+    func data(for request: URLRequest) async throws -> (Data, URLResponse)
 }
 
-extension URLSession: URLContentRetriever {}
+extension URLSession: NetworkContentRetriever {}
 
 protocol JSONDecoderProtocol {
     func decode<T>(_ type: T.Type, from data: Data, keyPath: String, keyPathSeparator separator: String) throws -> T where T: Decodable
@@ -28,12 +29,12 @@ extension JSONDecoder: JSONDecoderProtocol {}
 
 struct APIClientImp: APIClient {
     
-    private let urlContentRetriever: URLContentRetriever
+    private let networkContentRetriever: NetworkContentRetriever
     private let jsonDecoder: JSONDecoderProtocol
     
-    init(urlContentRetriever: URLContentRetriever = URLSession.shared,
+    init(networkContentRetriever: NetworkContentRetriever = URLSession.shared,
          jsonDecoder: JSONDecoderProtocol = JSONDecoder()) {
-        self.urlContentRetriever = urlContentRetriever
+        self.networkContentRetriever = networkContentRetriever
         self.jsonDecoder = jsonDecoder
     }
     
@@ -75,7 +76,7 @@ struct APIClientImp: APIClient {
     }
     
     private func map<T: Decodable>(object: T.Type, from url: URL, at keyPath: String) async throws -> T {
-        guard let (data, _) = try? await urlContentRetriever.data(from: url) else {
+        guard let (data, _) = try? await networkContentRetriever.data(from: url) else {
             throw APIError.network
         }
         

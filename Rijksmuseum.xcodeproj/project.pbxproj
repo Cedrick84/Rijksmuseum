@@ -20,19 +20,23 @@
 		000970B12A24EEAF005CAAB4 /* ObjectDetailsViewPresenterImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000970B02A24EEAF005CAAB4 /* ObjectDetailsViewPresenterImp.swift */; };
 		000970B32A24F151005CAAB4 /* APIError+Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000970B22A24F151005CAAB4 /* APIError+Message.swift */; };
 		000970B72A24F7F2005CAAB4 /* JSONDecoder+KeyPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000970B62A24F7F2005CAAB4 /* JSONDecoder+KeyPath.swift */; };
+		000A78982A2522E600C75BA9 /* ObjectListViewPresenterImpTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008BBE252A20E2720046DE7A /* ObjectListViewPresenterImpTests.swift */; };
 		002B0B452A249B3800C38CCB /* ArtObjectSummaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002B0B442A249B3800C38CCB /* ArtObjectSummaryCell.swift */; };
 		002B0B4A2A249D9600C38CCB /* LoadingFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002B0B492A249D9600C38CCB /* LoadingFooterView.swift */; };
 		002B0B4D2A24BCB300C38CCB /* UICollectionView+Dequeue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002B0B4C2A24BCB300C38CCB /* UICollectionView+Dequeue.swift */; };
 		002B0B4F2A24BF3100C38CCB /* PaginatedViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002B0B4E2A24BF3100C38CCB /* PaginatedViewState.swift */; };
 		002B0B522A24C0C900C38CCB /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002B0B512A24C0C900C38CCB /* APIClient.swift */; };
 		002B0B562A24C1C900C38CCB /* APIClientImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002B0B552A24C1C900C38CCB /* APIClientImp.swift */; };
-		0049042D2A20F4A900D1085B /* ObjectListViewPresenterImpTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008BBE252A20E2720046DE7A /* ObjectListViewPresenterImpTests.swift */; };
 		0049042F2A20F54F00D1085B /* ObjectListViewRouterImpTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008BBE232A20E2250046DE7A /* ObjectListViewRouterImpTests.swift */; };
-		007514A02A25055C00706950 /* MockURLContentRetriever.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0075149F2A25055C00706950 /* MockURLContentRetriever.swift */; };
+		007514A02A25055C00706950 /* MockNetworkContentRetriever.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0075149F2A25055C00706950 /* MockNetworkContentRetriever.swift */; };
 		007514A22A25061F00706950 /* MockJSONDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007514A12A25061F00706950 /* MockJSONDecoder.swift */; };
 		007514A52A2506BD00706950 /* APIClientImpTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007514A42A2506BD00706950 /* APIClientImpTests.swift */; };
 		007514A92A250A2E00706950 /* list-response.json in Resources */ = {isa = PBXBuildFile; fileRef = 007514A72A250A2E00706950 /* list-response.json */; };
 		007514AD2A250FE300706950 /* Data+JSONFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007514AC2A250FE300706950 /* Data+JSONFile.swift */; };
+		007514AF2A25123F00706950 /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007514AE2A25123F00706950 /* ImageDownloader.swift */; };
+		007514B12A2512A000706950 /* ImageDownloaderImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007514B02A2512A000706950 /* ImageDownloaderImp.swift */; };
+		007514B32A251D6500706950 /* UIImage+Resize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007514B22A251D6500706950 /* UIImage+Resize.swift */; };
+		007514B52A251F9300706950 /* URL+Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007514B42A251F9300706950 /* URL+Test.swift */; };
 		008BBDAE2A20D7990046DE7A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008BBDAD2A20D7990046DE7A /* AppDelegate.swift */; };
 		008BBDB02A20D7990046DE7A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008BBDAF2A20D7990046DE7A /* SceneDelegate.swift */; };
 		008BBDB72A20D79A0046DE7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 008BBDB62A20D79A0046DE7A /* Assets.xcassets */; };
@@ -106,11 +110,15 @@
 		002B0B4E2A24BF3100C38CCB /* PaginatedViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginatedViewState.swift; sourceTree = "<group>"; };
 		002B0B512A24C0C900C38CCB /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		002B0B552A24C1C900C38CCB /* APIClientImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientImp.swift; sourceTree = "<group>"; };
-		0075149F2A25055C00706950 /* MockURLContentRetriever.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLContentRetriever.swift; sourceTree = "<group>"; };
+		0075149F2A25055C00706950 /* MockNetworkContentRetriever.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkContentRetriever.swift; sourceTree = "<group>"; };
 		007514A12A25061F00706950 /* MockJSONDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockJSONDecoder.swift; sourceTree = "<group>"; };
 		007514A42A2506BD00706950 /* APIClientImpTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientImpTests.swift; sourceTree = "<group>"; };
 		007514A72A250A2E00706950 /* list-response.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "list-response.json"; sourceTree = "<group>"; };
 		007514AC2A250FE300706950 /* Data+JSONFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+JSONFile.swift"; sourceTree = "<group>"; };
+		007514AE2A25123F00706950 /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
+		007514B02A2512A000706950 /* ImageDownloaderImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloaderImp.swift; sourceTree = "<group>"; };
+		007514B22A251D6500706950 /* UIImage+Resize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Resize.swift"; sourceTree = "<group>"; };
+		007514B42A251F9300706950 /* URL+Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Test.swift"; sourceTree = "<group>"; };
 		008BBDAA2A20D7990046DE7A /* Rijksmuseum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rijksmuseum.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		008BBDAD2A20D7990046DE7A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		008BBDAF2A20D7990046DE7A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -265,23 +273,25 @@
 				002B0B4C2A24BCB300C38CCB /* UICollectionView+Dequeue.swift */,
 				000970B22A24F151005CAAB4 /* APIError+Message.swift */,
 				000970B62A24F7F2005CAAB4 /* JSONDecoder+KeyPath.swift */,
+				007514B22A251D6500706950 /* UIImage+Resize.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		002B0B502A24C0A300C38CCB /* API */ = {
+		002B0B502A24C0A300C38CCB /* Network */ = {
 			isa = PBXGroup;
 			children = (
 				002B0B532A24C0F500C38CCB /* Protocol */,
 				002B0B542A24C16B00C38CCB /* Implementation */,
 			);
-			path = API;
+			path = Network;
 			sourceTree = "<group>";
 		};
 		002B0B532A24C0F500C38CCB /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
 				002B0B512A24C0C900C38CCB /* APIClient.swift */,
+				007514AE2A25123F00706950 /* ImageDownloader.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -290,6 +300,7 @@
 			isa = PBXGroup;
 			children = (
 				002B0B552A24C1C900C38CCB /* APIClientImp.swift */,
+				007514B02A2512A000706950 /* ImageDownloaderImp.swift */,
 			);
 			path = Implementation;
 			sourceTree = "<group>";
@@ -315,6 +326,7 @@
 			isa = PBXGroup;
 			children = (
 				007514AC2A250FE300706950 /* Data+JSONFile.swift */,
+				007514B42A251F9300706950 /* URL+Test.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -344,7 +356,7 @@
 			isa = PBXGroup;
 			children = (
 				008BBDDD2A20D8400046DE7A /* Architecture Protocols */,
-				002B0B502A24C0A300C38CCB /* API */,
+				002B0B502A24C0A300C38CCB /* Network */,
 				002B0B4B2A24BC9D00C38CCB /* Extensions */,
 				008BBE022A20DC460046DE7A /* Protocols */,
 				008BBDE82A20D8680046DE7A /* Enums */,
@@ -520,7 +532,7 @@
 			isa = PBXGroup;
 			children = (
 				008BBE1C2A20E1540046DE7A /* MockViewControllerPresenter.swift */,
-				0075149F2A25055C00706950 /* MockURLContentRetriever.swift */,
+				0075149F2A25055C00706950 /* MockNetworkContentRetriever.swift */,
 				007514A12A25061F00706950 /* MockJSONDecoder.swift */,
 			);
 			path = Mocks;
@@ -709,6 +721,7 @@
 				008BBE0F2A20DDAC0046DE7A /* ObjectListViewWorker.swift in Sources */,
 				008BBDE32A20D85C0046DE7A /* ActionListener.swift in Sources */,
 				002B0B4F2A24BF3100C38CCB /* PaginatedViewState.swift in Sources */,
+				007514AF2A25123F00706950 /* ImageDownloader.swift in Sources */,
 				008BBE082A20DD1E0046DE7A /* ObjectListViewPresenterImp.swift in Sources */,
 				0009709E2A24E6DA005CAAB4 /* ObjectDetailsViewInteractor.swift in Sources */,
 				008BBDE72A20D85C0046DE7A /* ViewUpdater.swift in Sources */,
@@ -719,6 +732,7 @@
 				000970A92A24EB2F005CAAB4 /* ObjectDetailsViewWorker.swift in Sources */,
 				008BBDF92A20DAC10046DE7A /* ObjectListViewInteractor.swift in Sources */,
 				008BBE062A20DC9D0046DE7A /* ObjectListViewController.swift in Sources */,
+				007514B12A2512A000706950 /* ImageDownloaderImp.swift in Sources */,
 				008BBE0A2A20DD440046DE7A /* ObjectListViewInteractorImp.swift in Sources */,
 				008BBDF52A20DA4B0046DE7A /* ObjectListViewRouter.swift in Sources */,
 				008BBE112A20DDB30046DE7A /* ObjectListViewWorkerImp.swift in Sources */,
@@ -728,6 +742,7 @@
 				008BBDE62A20D85C0046DE7A /* Interactor.swift in Sources */,
 				000970AD2A24ECBD005CAAB4 /* ObjectDetailsViewRouterImp.swift in Sources */,
 				008BBE012A20DBFF0046DE7A /* ObjectListViewRouterImp.swift in Sources */,
+				007514B32A251D6500706950 /* UIImage+Resize.swift in Sources */,
 				0009709C2A24E6CF005CAAB4 /* ObjectDetailsViewPresenter.swift in Sources */,
 				000970B32A24F151005CAAB4 /* APIError+Message.swift in Sources */,
 				000970B12A24EEAF005CAAB4 /* ObjectDetailsViewPresenterImp.swift in Sources */,
@@ -741,15 +756,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				000A78982A2522E600C75BA9 /* ObjectListViewPresenterImpTests.swift in Sources */,
 				008BBE2A2A20E3530046DE7A /* ObjectListViewInteractorImpTests.swift in Sources */,
 				008BBE1A2A20E1090046DE7A /* MockViewRouter.swift in Sources */,
 				008BBE182A20E1090046DE7A /* MockViewPresenter.swift in Sources */,
 				008BBE192A20E1090046DE7A /* MockViewUpdater.swift in Sources */,
+				007514B52A251F9300706950 /* URL+Test.swift in Sources */,
 				008BBE282A20E2EE0046DE7A /* MockProtocols.swift in Sources */,
-				007514A02A25055C00706950 /* MockURLContentRetriever.swift in Sources */,
+				007514A02A25055C00706950 /* MockNetworkContentRetriever.swift in Sources */,
 				008BBE2D2A20E3D80046DE7A /* MockObjectListViewWorker.swift in Sources */,
 				007514A52A2506BD00706950 /* APIClientImpTests.swift in Sources */,
-				0049042D2A20F4A900D1085B /* ObjectListViewPresenterImpTests.swift in Sources */,
 				007514AD2A250FE300706950 /* Data+JSONFile.swift in Sources */,
 				0049042F2A20F54F00D1085B /* ObjectListViewRouterImpTests.swift in Sources */,
 				008BBE1D2A20E1540046DE7A /* MockViewControllerPresenter.swift in Sources */,

@@ -103,7 +103,7 @@ final class ObjectListViewInteractorImpTests: XCTestCase {
         let partiallyLoadedExpectation = expectation(description: "Partially loaded event sent.")
         let presenterCompletedExpectation = expectation(description: "Presented completed.")
         
-        let workerResponse: [ArtObjectSummary] = Array(repeating: .init(id: "", title: ""), count: 20)
+        let workerResponse: [ArtObjectSummary] = Array(repeating: .init(id: "", title: "", imageURL: .test), count: 20)
         let router = MockViewRouter<ObjectListViewRouterAction>(eventProcessor: .none)
         let presenter = MockViewPresenter<ObjectListViewPresenterEvent, PaginatedViewState<[ObjectSummaryCellViewModel]>>(eventProcessor:
                 .events([{ event in
@@ -142,7 +142,7 @@ final class ObjectListViewInteractorImpTests: XCTestCase {
         let loadedExpectation = expectation(description: "Loaded event sent.")
         let presenterCompletedExpectation = expectation(description: "Presented completed.")
         
-        let workerResponse: [ArtObjectSummary] = [.init(id: "", title: "")]
+        let workerResponse: [ArtObjectSummary] = [.init(id: "", title: "", imageURL: .test)]
         let router = MockViewRouter<ObjectListViewRouterAction>(eventProcessor: .none)
         let presenter = MockViewPresenter<ObjectListViewPresenterEvent, PaginatedViewState<[ObjectSummaryCellViewModel]>>(eventProcessor:
                 .events([{ event in
@@ -183,7 +183,7 @@ final class ObjectListViewInteractorImpTests: XCTestCase {
         let loadedExpectation = expectation(description: "Loaded event sent.")
         let presenterCompletedExpectation = expectation(description: "Presented completed.")
         
-        let firstResponse: [ArtObjectSummary] = Array(repeating: .init(id: "", title: ""), count: 20)
+        let firstResponse: [ArtObjectSummary] = Array(repeating: .init(id: "", title: "", imageURL: .test), count: 20)
         
         let router = MockViewRouter<ObjectListViewRouterAction>(eventProcessor: .none)
         let presenter = MockViewPresenter<ObjectListViewPresenterEvent, PaginatedViewState<[ObjectSummaryCellViewModel]>>(eventProcessor:

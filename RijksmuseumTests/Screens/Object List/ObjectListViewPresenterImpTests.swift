@@ -13,12 +13,14 @@ final class ObjectListViewPresenterImpTests: XCTestCase {
 
     func test_onProcessEvent_callsViewUpdater() throws {
         let id = UUID().uuidString
+        let summary = ArtObjectSummary(id: id, title: "", imageURL: .test)
+        let viewModel = ObjectSummaryCellViewModel(id: id, title: "", imageURL: .test)
         
         let mapping: [(event: ObjectListViewPresenterEvent, state: PaginatedViewState<[ObjectSummaryCellViewModel]>)] = [
             (.loading, .loading),
             (.loaded([]), .empty),
-            (.partiallyLoaded([.init(id: id, title: "")]), .partiallyLoaded([.init(id: id, title: "")])),
-            (.loaded([.init(id: id, title: "")]), .loaded([.init(id: id, title: "")])),
+            (.partiallyLoaded([summary]), .partiallyLoaded([viewModel])),
+            (.loaded([summary]), .loaded([viewModel])),
             (.error(.decoding), .error(APIError.decoding.message))
         ]
         

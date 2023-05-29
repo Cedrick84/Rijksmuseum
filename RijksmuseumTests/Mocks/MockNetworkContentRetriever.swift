@@ -1,5 +1,5 @@
 //
-//  MockURLContentRetriever.swift
+//  MockNetworkContentRetriever.swift
 //  RijksmuseumTests
 //
 //  Created by Cedrick Gout on 29/05/2023.
@@ -8,7 +8,7 @@
 import XCTest
 @testable import Rijksmuseum
 
-class MockURLContentRetriever: URLContentRetriever {
+class MockNetworkContentRetriever: NetworkContentRetriever {
     
     var response: Result<(Data, URLResponse), Error>?
     var onDataFromURL: ((URL) -> Void)?
@@ -27,5 +27,9 @@ class MockURLContentRetriever: URLContentRetriever {
         case .failure(let error):
             throw error
         }
+    }
+    
+    func data(for request: URLRequest) async throws -> (Data, URLResponse) {
+        try await data(from: .test)
     }
 }

@@ -23,19 +23,19 @@ final class APIClientImpTests: XCTestCase {
     func testGetObjectSummariesOnSuccess_returnsItems() async throws {
         let responseData = Data.from(jsonFile: "list-response")
         
-        let contentRetriever = MockURLContentRetriever()
+        let contentRetriever = MockNetworkContentRetriever()
         contentRetriever.response = .success((responseData, .init()))
         
-        let client = APIClientImp(urlContentRetriever: contentRetriever, jsonDecoder: JSONDecoder())
+        let client = APIClientImp(networkContentRetriever: contentRetriever, jsonDecoder: JSONDecoder())
         let items = try await client.getObjectSummaries(for: 1, with: 1)
         XCTAssertEqual(items.count, 1)
     }
     
     func testGetObjectSummariesOnNetworkFailure_returnsNetworkError() async throws {
-        let contentRetriever = MockURLContentRetriever()
+        let contentRetriever = MockNetworkContentRetriever()
         contentRetriever.response = .failure(NSError(domain: "", code: 1))
         
-        let client = APIClientImp(urlContentRetriever: contentRetriever, jsonDecoder: JSONDecoder())
+        let client = APIClientImp(networkContentRetriever: contentRetriever, jsonDecoder: JSONDecoder())
         let errorExpectation = expectation(description: "Throws network error.")
         
         do {
@@ -53,11 +53,11 @@ final class APIClientImpTests: XCTestCase {
     }
     
     func testGetObjectSummariesOnDecodingFailure_returnsDecodingError() async throws {
-        let contentRetriever = MockURLContentRetriever()
+        let contentRetriever = MockNetworkContentRetriever()
         contentRetriever.response = .success((.init(), .init()))
         
         let jsonDecoder = MockJSONDecoder<[ArtObjectSummary]>(result: .failure(NSError(domain: "", code: 1)))
-        let client = APIClientImp(urlContentRetriever: contentRetriever, jsonDecoder: JSONDecoder())
+        let client = APIClientImp(networkContentRetriever: contentRetriever, jsonDecoder: JSONDecoder())
         let errorExpectation = expectation(description: "Throws network error.")
         
         do {
