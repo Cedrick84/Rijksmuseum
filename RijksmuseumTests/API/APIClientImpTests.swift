@@ -57,7 +57,7 @@ final class APIClientImpTests: XCTestCase {
         contentRetriever.response = .success((.init(), .init()))
         
         let jsonDecoder = MockJSONDecoder<[ArtObjectSummary]>(result: .failure(NSError(domain: "", code: 1)))
-        let client = APIClientImp(networkContentRetriever: contentRetriever, jsonDecoder: JSONDecoder())
+        let client = APIClientImp(networkContentRetriever: contentRetriever, jsonDecoder: jsonDecoder)
         let errorExpectation = expectation(description: "Throws network error.")
         
         do {

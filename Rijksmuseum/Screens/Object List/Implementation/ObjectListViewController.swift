@@ -97,14 +97,10 @@ final class ObjectListViewController: UIViewController, ObjectListViewActionList
     
     private func showAlert(with message: String) {
         let alert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
-        
         let retryAction = UIAlertAction(title: "Retry", style: .default) { _ in
             self.actionListener?.handle(action: .requestObjects)
         }
         alert.addAction(retryAction)
-        
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-        alert.addAction(cancelAction)
         
         present(alert, animated: true, completion: nil)
     }
